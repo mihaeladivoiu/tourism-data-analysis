@@ -5,6 +5,10 @@ import geopandas as gpd
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.cluster import KMeans
 import statsmodels.api as sm
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.preprocessing import StandardScaler
 
 # --- Load Data ---
 activity_data = pd.read_csv('Casa_Timis_Monthly_Activity_3Y.csv')
@@ -85,14 +89,49 @@ with st.container():
 
 # --- Utilizarea pachetului scikit-learn (Clusterizare) ---   -> ex 8  
 
-#TODO REGRESIE LINIARA !!!!!!!!!
+#TODO REGRESIE Logistica !!!!!!!!!
+
 
 #clusterizare luni in functie de venit si oaspeti
 k_means = KMeans(n_clusters=3, random_state=42)
 activity_data['Cluster']=k_means.fit_predict(activity_data[['Total_Revenue_EUR', 'Number_of_Guests']])
 st.divider()
-st.subheader('🔍 Cluster Assignments')
+st.subheader('🔍 Cluster Assignments') #'Clusterizare luni în funcție de venit și oaspeți')
 st.dataframe(activity_data[['Month_Year', 'Cluster']])
+st.divider()
+
+# adaugare si evaluare model de regresie logistica
+
+st.subheader('Logistic Regression Model Evaluation')
+# Pregătirea datelor
+x = activity_data[['Total_Revenue_EUR', 'Number_of_Guests']]
+y = activity_data['Cluster']
+
+# Împărțirea datelor în seturi de antrenament și test
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+
+#normalizarea datelor
+scalar = StandardScaler()
+x_train_scaler = scalar.fit_transform(x_train)
+x_test_scaled = scalar.transform(x_test)
+
+# antrenarea modelului 
+log_reg = LogisticRegression(multi_class='ovr', random_state=42)
+log_reg.fit(x_train_scaler, y_train)
+
+# predictii
+y_pred = log_reg.predict(x_test_scaled)
+
+# evaluarea modelului
+accuracy = accuracy_score(y_test, y_pred)
+report = classification_report(y_test, y_pred, output_dict=True)
+
+# afisare rez
+st.write(f'**Acuratete:** {accuracy:.2f}')
+
+# Afișarea raportului într-un format mai clar
+st.write('### Raport detaliat al clasificării:')
+st.dataframe(pd.DataFrame(report).transpose().round(2))
 st.divider()
 
 # --- Utilizarea pachetului statmodels (Regresie multipla) ---  -> ex 9
@@ -100,11 +139,11 @@ st.divider()
 with st.container():
     st.subheader('📉 Regression Analysis')
     #predictie venit total pe baza numarului de oaspeti si rata ocuparii
-    X = activity_data[['Number_of_Guests', 'Occupancy_Rate_%']]
-    X = sm.add_constant(X) # adaugam constanta pentru intercept
-    Y = activity_data['Total_Revenue_EUR']
+    x = activity_data[['Number_of_Guests', 'Occupancy_Rate_%']]
+    x = sm.add_constant(x) # adaugam constanta pentru intercept
+    y = activity_data['Total_Revenue_EUR']
 
-    model = sm.OLS(Y, X).fit()
+    model = sm.OLS(y, x).fit()
     st.write('**Multiple Regression Summary**')
     # st.text(model.summary())
 
