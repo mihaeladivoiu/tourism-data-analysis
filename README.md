@@ -1,6 +1,6 @@
 # 📦 Software Packages Project
 
-  Interactive data analysis dashboard using **Python**, **Streamlit** and **scikit-learn**, combining operational data and customer reviews for a tourism business.
+Interactive data analysis dashboard using **Python**, **Streamlit**, and key packages like **pandas**, **scikit-learn**, **statsmodels**, and **geopandas**, combining operational metrics and customer reviews for a tourism business.
 
 ---
 
