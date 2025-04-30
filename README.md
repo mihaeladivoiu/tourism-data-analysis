@@ -34,8 +34,10 @@ This project includes:
 
 ```bash
 pip install -r requirements.txt
+```
 
-	2.	Launch the dashboard:
+2. Launch the dashboard:
 
 ```bash
 streamlit run dashboard.py
+```
