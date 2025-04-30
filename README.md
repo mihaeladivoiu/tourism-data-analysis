@@ -1,8 +1,6 @@
-# 🏡 Casa Timiș - Activity Dashboard
+# 📦 Software Packages Project
 
-Interactive data analysis dashboard using **Python**, **Streamlit**, and **scikit-learn**, combining operational data and customer reviews for a tourism business.
-
-![Casa Timis](casa_timis.png)
+Interactive data analysis dashboard using **Python**, **Streamlit** and **scikit-learn**, combining operational data and customer reviews for a tourism business.
 
 ---
 
@@ -31,8 +29,6 @@ This project includes:
 ---
 
 ## ⚙️ How to Run Locally
-
-1. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
