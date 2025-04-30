@@ -1,20 +1,38 @@
-# Software Packages Project
+# 🏡 Casa Timiș - Activity Dashboard
 
-A data analysis project using both **Python** and **SAS**, showcasing key techniques for data cleaning, modeling, and visualization.
+Interactive data analysis dashboard using **Python**, **Streamlit**, and **scikit-learn**, combining operational data and customer reviews for a tourism business.
 
-## 📁 Structure
+![Casa Timis](casa_timis.png)
 
-- `dashboard.py` — Streamlit dashboard built with Python
-- `Casa_Timis_Monthly_Activity_3Y.csv` — Monthly activity data
-- `Casa_Timis_Customer_Reviews_3Y.csv` — Customer review data
-- `casa_timis.png` — Logo/image for dashboard
+---
 
-## 📦 Tools & Technologies
+## 📊 Project Overview
 
-- **Python**: pandas, sklearn, statsmodels, geopandas, streamlit
-- **SAS**: 
+This project includes:
+- Exploratory data analysis and visualization
+- Missing and outlier handling
+- Data encoding and scaling
+- Clustering using K-Means
+- Logistic regression and multiple regression models
+- Geolocation mapping with GeoPandas
 
-## 🚀 How to Run
+---
+
+## 📁 Project Structure
+
+| File                          | Description                                      |
+|-------------------------------|--------------------------------------------------|
+| `dashboard.py`               | Main Streamlit app                              |
+| `Casa_Timis_Monthly_Activity_3Y.csv` | Monthly KPIs for the business (activity) |
+| `Casa_Timis_Customer_Reviews_3Y.csv` | Customer review scores                   |
+| `casa_timis.png`             | Header image/logo for dashboard                |
+| `README.md`                  | You’re reading it 😉                            |
+
+---
+
+## ⚙️ How to Run Locally
+
+1. Install dependencies:
 
 ```bash
-streamlit run dashboard.py
+pip install -r requirements.txt
