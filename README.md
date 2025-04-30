@@ -18,14 +18,15 @@ This project includes:
 
 ## 📁 Project Structure
 
-| File                              | Description                                     |
-|-----------------------------------|-------------------------------------------------|
-| `dashboard.py`                   | Main Streamlit app                              |
+| File/Folder                       | Description                                     |
+|----------------------------------|-------------------------------------------------|
+| `dashboard.py`                  | Main Streamlit app                              |
 | `Casa_Timis_Monthly_Activity_3Y.csv` | Monthly KPIs for the business (activity)   |
 | `Casa_Timis_Customer_Reviews_3Y.csv` | Customer review scores                    |
-| `casa_timis.png`                 | Header image/logo for dashboard                 |
-| `requirements.txt`              | List of Python packages needed to run the app   |
-| `README.md`                     | You're reading it 😉                             |
+| `casa_timis.png`                | Header image/logo for dashboard                 |
+| `requirements.txt`             | List of Python packages needed to run the app   |
+| `.streamlit/config.toml`       | Streamlit theme customization                   |
+| `README.md`                    | You're reading it 😉                             |
 
 ---
 
