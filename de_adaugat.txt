@@ -1,0 +1,52 @@
+
+
+# --- Utilizarea pachetului scikit-learn (Clusterizare) ---
+st.subheader('Clusterizare luni în funcție de venit și oaspeți')
+
+# Aplicarea algoritmului KMeans
+k_means = KMeans(n_clusters=3, random_state=42)
+activity_data['Cluster'] = k_means.fit_predict(activity_data[['Total_Revenue_EUR', 'Number_of_Guests']])
+
+# Afișarea rezultatelor clusterizării
+st.write('## Asignarea clusterelor:')
+st.dataframe(activity_data[['Month_Year', 'Cluster']])
+
+
+# --- Adăugarea și evaluarea modelului de Regresie Logistică ---
+st.subheader('Evaluarea modelului de regresie logistică')
+
+# Importarea bibliotecilor necesare
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.preprocessing import StandardScaler
+
+# Pregătirea datelor
+X = activity_data[['Total_Revenue_EUR', 'Number_of_Guests']]
+y = activity_data['Cluster']
+
+# Împărțirea datelor în seturi de antrenament și test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Normalizarea datelor
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Antrenarea modelului
+log_reg = LogisticRegression(multi_class='ovr', random_state=42)
+log_reg.fit(X_train_scaled, y_train)
+
+# Predicții
+y_pred = log_reg.predict(X_test_scaled)
+
+# Evaluarea modelului
+accuracy = accuracy_score(y_test, y_pred)
+report = classification_report(y_test, y_pred, output_dict=True)
+
+# Afișarea rezultatelor
+st.write(f'**Acuratețe:** {accuracy:.2f}')
+
+# Afișarea raportului într-un format mai clar
+st.write('### Raport detaliat al clasificării:')
+st.dataframe(pd.DataFrame(report).transpose().round(2))
