@@ -137,15 +137,15 @@ scalar = StandardScaler()
 # Scale selected numerical columns
 columns_to_scale = [
     'Number_of_Guests',
-    'Occupancy_Rate_%',
+    'Occupancy_Rate_Percent',
     'Average_Room_Price_EUR'
 ]
 activity_data[columns_to_scale] = scalar.fit_transform(activity_data[columns_to_scale])
 
 # Display data after scaling 
 st.subheader('📐 Scaled Numerical Data')
-st.dataframe(activity_data[['Number_of_Guests', 'Occupancy_Rate_%', 'Average_Room_Price_EUR']])
-# Update the columns Number_of_Guests, Occupancy_Rate_%, Average_Room_Price_EUR in activity_data with the new scaled values
+st.dataframe(activity_data[['Number_of_Guests', 'Occupancy_Rate_Percent', 'Average_Room_Price_EUR']])
+# Update the columns Number_of_Guests, Occupancy_Rate_Percent, Average_Room_Price_EUR in activity_data with the new scaled values
 
 # ----- Statistical processing: grouping and aggregation -----
 
@@ -209,7 +209,7 @@ st.divider()
 with st.container():
     st.subheader('📉 Regression Analysis')
     # Predicting total revenue based on number of guests and occupancy rate    
-    x = activity_data[['Number_of_Guests', 'Occupancy_Rate_%']]
+    x = activity_data[['Number_of_Guests', 'Occupancy_Rate_Percent']]
     x = sm.add_constant(x) # Add constant for intercept
     y = activity_data['Total_Revenue_EUR']
 
