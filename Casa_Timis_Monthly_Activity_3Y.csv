@@ -1,4 +1,4 @@
-Month_Year,Number_of_Guests,Occupancy_Rate_%,Average_Room_Price_EUR,Spa_Revenue_EUR,Restaurant_Revenue_EUR,Total_Revenue_EUR
+Month_Year,Number_of_Guests,Occupancy_Rate_Percent,Average_Room_Price_EUR,Spa_Revenue_EUR,Restaurant_Revenue_EUR,Total_Revenue_EUR
 January 2022,313,87.67,156.98,10516.75,31778.67,91430.16
 February 2022,2500,60.69,206.78,14484.59,36913.31,120255.64
 March 2022,299,37.77,304.5,14502.95,36612.59,142161.04
