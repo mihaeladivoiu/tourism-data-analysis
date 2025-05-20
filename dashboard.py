@@ -18,7 +18,7 @@ reviews_data = pd.read_csv('Casa_Timis_Customer_Reviews_3Y.csv')
 # ----- Streamlit App Start -----
 
 st.image('casa_timis.png', use_container_width=True)
-st.title('Casa Timis - Activity Dashboard') #  -> ex 1
+st.title('Casa Timis - Activity Dashboard')
 st.divider()
 
 st.subheader('📈 Monthly Activity Data')
