@@ -29,14 +29,15 @@ The project analyzes three years of monthly activity and customer review data fr
 
 | File/Folder                         | Description                                                  |
 |------------------------------------|--------------------------------------------------------------|
-| `dashboard.py`                     | Main Streamlit dashboard app                                 |
-| `Casa_Timis_Monthly_Activity_3Y.csv` | Monthly performance KPIs                                     |
-| `Casa_Timis_Customer_Reviews_3Y.csv` | Customer reviews & ratings                                   |
-| `sas_analysis.sas`                 | SAS script with data processing, analysis & visualization    |
-| `casa_timis.png`                   | Dashboard header image                                       |
-| `requirements.txt`                 | Python dependencies                                          |
 | `.streamlit/config.toml`           | Streamlit theme configuration                                |
-| `README.md`                        | You're reading it 😉                                                   |
+| `Casa_Timis_Customer_Reviews_3Y.csv` | Customer reviews & ratings                                   |
+| `Casa_Timis_Monthly_Activity_3Y.csv` | Monthly performance KPIs                                     |
+| `Project_Documentation_RO.pdf`     | Full project documentation (in Romanian)                     |
+| `README.md`                        | You're reading it 😉                                         |
+| `casa_timis.png`                   | Dashboard header image                                       |
+| `dashboard.py`                     | Main Streamlit dashboard app                                 |
+| `requirements.txt`                 | Python dependencies                                          |
+| `sas_analysis.sas`                 | SAS script with data processing, analysis & visualization    |
 
 ---
 
