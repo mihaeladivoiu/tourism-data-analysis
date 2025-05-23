@@ -61,6 +61,8 @@ pip install -r requirements.txt
 streamlit run dashboard.py
 ```
 
+---
+
 ## 📘 SAS Analysis Features
 
 The `sas_analysis.sas` script extends the Python-based dashboard with traditional statistical processing using SAS. It includes:
@@ -76,7 +78,6 @@ The `sas_analysis.sas` script extends the Python-based dashboard with traditiona
 - Visualizing trends with `PROC SGPLOT`  
 - Predicting revenue with multiple linear regression  
 
----
 
 ### ▶️ How to Run the SAS Analysis Locally
 
