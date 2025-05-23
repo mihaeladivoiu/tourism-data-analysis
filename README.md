@@ -58,6 +58,7 @@ To run locally:
 ```bash
 pip install -r requirements.txt
 streamlit run dashboard.py
+```
 
 ## 📘 SAS Analysis Features
 
