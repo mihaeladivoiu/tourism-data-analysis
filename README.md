@@ -1,6 +1,6 @@
 # 📦 Software Packages Project
 
-This is a student project combining interactive data visualization with statistical and machine learning analysis, using **Python (Streamlit)** and **SAS**.
+Interactive data analysis dashboard using **Python (Streamlit)** and complementary statistical processing using **SAS**. The project explores operational metrics and customer reviews for a tourism business.
 
 ---
 
@@ -14,7 +14,7 @@ The project analyzes three years of monthly activity and customer review data fr
 - Clustering (K-Means)
 - Logistic and multiple linear regression
 - Geolocation mapping (GeoPandas)
-- SAS-based statistical analysis, custom formatting, data transformations, and reporting
+- Extended statistical analysis and reporting using SAS
 
 ---
 
@@ -36,7 +36,7 @@ The project analyzes three years of monthly activity and customer review data fr
 | `casa_timis.png`                   | Dashboard header image                                       |
 | `requirements.txt`                 | Python dependencies                                          |
 | `.streamlit/config.toml`           | Streamlit theme configuration                                |
-| `README.md`                        | This file                                                    |
+| `README.md`                        | You're reading it 😉                                                   |
 
 ---
 
@@ -58,3 +58,17 @@ To run locally:
 ```bash
 pip install -r requirements.txt
 streamlit run dashboard.py
+
+## 📘 SAS Analysis Features
+
+The sas_analysis.sas script extends the Python-based dashboard with traditional statistical processing using SAS. It includes:
+-	Importing .csv files as SAS datasets
+-	Creating custom formats for review scores and guest volume
+-	Conditional categorization of complaints and occupancy levels
+-	Subsetting months by low revenue or low scores
+-	Calculating new variables via ARRAY (e.g., revenue per guest)
+-	Joining datasets with SQL for integrated reporting
+-	Generating monthly and seasonal charts
+- Running descriptive statistics and regression models
+-	Visualizing trends with PROC SGPLOT
+-	Predicting revenue with multiple linear regression
