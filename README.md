@@ -73,3 +73,13 @@ The sas_analysis.sas script extends the Python-based dashboard with traditional 
 - Running descriptive statistics and regression models
 -	Visualizing trends with PROC SGPLOT
 -	Predicting revenue with multiple linear regression
+
+To run the SAS analysis locally:
+
+```
+	1. Open SAS Studio (or your preferred SAS environment).
+	2. Update the file paths in sas_analysis.sas to match your local directory, for example:
+  datafile='/your/local/path/Casa_Timis_Monthly_Activity_3Y.csv'
+  3. Load the script sas_analysis.sas into the editor.
+	4. Run the full program to generate all datasets, charts, and statistical outputs.
+```
