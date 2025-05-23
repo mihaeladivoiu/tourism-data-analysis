@@ -53,7 +53,7 @@ The project analyzes three years of monthly activity and customer review data fr
 - Visualizes KPIs over time
 - Maps business location with `geopandas`
 
-To run locally:
+### ▶️ How to Run the Python App Locally
 
 ```bash
 pip install -r requirements.txt
@@ -62,24 +62,33 @@ streamlit run dashboard.py
 
 ## 📘 SAS Analysis Features
 
-The sas_analysis.sas script extends the Python-based dashboard with traditional statistical processing using SAS. It includes:
--	Importing .csv files as SAS datasets
--	Creating custom formats for review scores and guest volume
--	Conditional categorization of complaints and occupancy levels
--	Subsetting months by low revenue or low scores
--	Calculating new variables via ARRAY (e.g., revenue per guest)
--	Joining datasets with SQL for integrated reporting
--	Generating monthly and seasonal charts
-- Running descriptive statistics and regression models
--	Visualizing trends with PROC SGPLOT
--	Predicting revenue with multiple linear regression
+The `sas_analysis.sas` script extends the Python-based dashboard with traditional statistical processing using SAS. It includes:
 
-To run the SAS analysis locally:
+- Importing `.csv` files as SAS datasets  
+- Creating custom formats for review scores and guest volume  
+- Conditional categorization of complaints and occupancy levels  
+- Subsetting months by low revenue or low scores  
+- Calculating new variables via `ARRAY` (e.g., revenue per guest)  
+- Joining datasets with SQL for integrated reporting  
+- Generating monthly and seasonal charts  
+- Running descriptive statistics and regression models  
+- Visualizing trends with `PROC SGPLOT`  
+- Predicting revenue with multiple linear regression  
 
-```
-	1. Open SAS Studio (or your preferred SAS environment).
-	2. Update the file paths in sas_analysis.sas to match your local directory, for example:
-  datafile='/your/local/path/Casa_Timis_Monthly_Activity_3Y.csv'
-  3. Load the script sas_analysis.sas into the editor.
-	4. Run the full program to generate all datasets, charts, and statistical outputs.
-```
+---
+
+### ▶️ How to Run the SAS Analysis Locally
+
+To execute the SAS script and generate all outputs:
+
+1. **Open** SAS Studio (or your preferred SAS environment).
+2. **Update the file paths** in `sas_analysis.sas` to reflect your local setup. For example:
+
+   ```sas
+   datafile='/your/local/path/Casa_Timis_Monthly_Activity_3Y.csv'
+   ```
+
+3. **Load the script** `sas_analysis.sas` into the SAS editor.
+4. **Run the full program** to generate all processed datasets, charts, and statistical results.
+
+> ⚠️ *Make sure both CSV files are accessible from the updated paths for the import procedures to work correctly.*
