@@ -1,45 +1,60 @@
 # 📦 Software Packages Project
 
-Interactive data analysis dashboard using **Python**, **Streamlit**, and key packages like **pandas**, **scikit-learn**, **statsmodels**, and **geopandas**, combining operational metrics and customer reviews for a tourism business.
+This is a student project combining interactive data visualization with statistical and machine learning analysis, using **Python (Streamlit)** and **SAS**.
 
 ---
 
 ## 📊 Project Overview
 
-This project includes:
-- Exploratory data analysis and visualization
-- Missing and outlier handling
-- Data encoding and scaling
-- Clustering using K-Means
-- Logistic regression and multiple regression models
-- Geolocation mapping with GeoPandas
+The project analyzes three years of monthly activity and customer review data from a tourism business — Casa Timiș. It includes:
+
+- Exploratory Data Analysis (EDA)
+- Missing value and outlier handling
+- Data encoding and normalization
+- Clustering (K-Means)
+- Logistic and multiple linear regression
+- Geolocation mapping (GeoPandas)
+- SAS-based statistical analysis, custom formatting, data transformations, and reporting
+
+---
+
+## 🧰 Technologies Used
+
+- **Python Packages**: `pandas`, `numpy`, `scikit-learn`, `statsmodels`, `streamlit`, `geopandas`
+- **SAS Features**: `PROC IMPORT`, `PROC FORMAT`, `PROC SQL`, `PROC MEANS`, `PROC REG`, `PROC SGPLOT`, array processing
 
 ---
 
 ## 📁 Project Structure
 
-| File/Folder                       | Description                                     |
-|----------------------------------|-------------------------------------------------|
-| `dashboard.py`                  | Main Streamlit app                              |
-| `Casa_Timis_Monthly_Activity_3Y.csv` | Monthly KPIs for the business (activity)   |
-| `Casa_Timis_Customer_Reviews_3Y.csv` | Customer review scores                    |
-| `casa_timis.png`                | Header image/logo for dashboard                 |
-| `requirements.txt`             | List of Python packages needed to run the app   |
-| `.streamlit/config.toml`       | Streamlit theme customization                   |
-| `README.md`                    | You're reading it 😉                             |
+| File/Folder                         | Description                                                  |
+|------------------------------------|--------------------------------------------------------------|
+| `dashboard.py`                     | Main Streamlit dashboard app                                 |
+| `Casa_Timis_Monthly_Activity_3Y.csv` | Monthly performance KPIs                                     |
+| `Casa_Timis_Customer_Reviews_3Y.csv` | Customer reviews & ratings                                   |
+| `sas_analysis.sas`                 | SAS script with data processing, analysis & visualization    |
+| `casa_timis.png`                   | Dashboard header image                                       |
+| `requirements.txt`                 | Python dependencies                                          |
+| `.streamlit/config.toml`           | Streamlit theme configuration                                |
+| `README.md`                        | This file                                                    |
 
 ---
 
-## ⚙️ How to Run Locally
+## 🧪 Python App Features
 
-1. Install dependencies:
+- Displays datasets in interactive tables
+- Identifies and fixes missing values
+- Detects and replaces outliers
+- Encodes and scales features for modeling
+- Clusters months using K-Means
+- Builds and evaluates a logistic regression model
+- Performs multiple linear regression using `statsmodels`
+- Displays regression summaries and statistics
+- Visualizes KPIs over time
+- Maps business location with `geopandas`
+
+To run locally:
 
 ```bash
 pip install -r requirements.txt
-```
-
-2. Launch the dashboard:
-
-```bash
 streamlit run dashboard.py
-```
