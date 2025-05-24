@@ -56,11 +56,11 @@ run;
 
 *1 - Complaint level classification: None, Low, High;
 data complaints_flag;
-set reviews;
-length Complaint_Level $10;
-if Complaints_Count = 0 then Complaint_Level = "None";
-else if Complaints_Count <= 3 then Complaint_Level = "Low";
-else Complaint_Level = "High";
+	set reviews;
+	length Complaint_Level $10;
+	if Complaints_Count = 0 then Complaint_Level = "None";
+	else if Complaints_Count <= 3 then Complaint_Level = "Low";
+	else Complaint_Level = "High";
 run;
 
 *2 - Monthly classification based on occupancy rate;
@@ -77,8 +77,8 @@ run;
 
 *1 - Subset of reviews with score below 9;
 data low_scores;
-set reviews;
-if Average_Review_Score < 9;
+	set reviews;
+	if Average_Review_Score < 9;
 run;
 
 *2 - Subset of months with total revenue below 100000 EUR;
@@ -92,9 +92,9 @@ run;
 
 * Calculating revenue per guest and log of spa revenue;
 data activity_extended;
-set activity;
-Revenue_per_Guest = Total_Revenue_EUR / Number_of_Guests;
-Log_Spa_Revenue = log(Spa_Revenue_EUR);
+	set activity;
+	Revenue_per_Guest = Total_Revenue_EUR / Number_of_Guests;
+	Log_Spa_Revenue = log(Spa_Revenue_EUR);
 run;
 
 
@@ -102,15 +102,15 @@ run;
 
 *1 - Join activity and reviews based on month;
 proc sql;
-create table combinat_sql as
-select A.*, B.Average_Review_Score, B.Number_of_Reviews	
-from activity A join reviews B
-on A.Month_Year = B.Month_Year;
+	create table combined_sql as
+	select A.*, B.Average_Review_Score, B.Number_of_Reviews	
+	from activity A join reviews B
+	on A.Month_Year = B.Month_Year;
 quit;
 
 *2 - Filtered join: only months with score below 9;
 proc sql;
-	create table combinat_low as
+	create table combined_low as
 	select A.*, B.Average_Review_Score
 	from activity A inner join reviews B
 	on A.Month_Year = B.Month_Year
@@ -147,8 +147,8 @@ run;
 
 *1 - Display months with review score below 9;
 proc print data=combinat_sql;
-where Average_Review_Score < 9;
-title "Months with Review Scores below 9";
+	where Average_Review_Score < 9;
+	title "Months with Review Scores below 9";
 run;
 
 *2 - Display months with more than 1000 guests;
@@ -177,8 +177,8 @@ run;
 
 *1 - Monthly total revenue evolution;
 proc sgplot data=activity;
-series x=Month_Year y=Total_Revenue_EUR;
-title "Monthly Revenue Evolution";
+	series x=Month_Year y=Total_Revenue_EUR;
+	title "Monthly Revenue Evolution";
 run;
 
 *2 - Monthly occupancy rate evolution;
