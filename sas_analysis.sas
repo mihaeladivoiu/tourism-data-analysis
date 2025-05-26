@@ -146,7 +146,7 @@ run;
 /* -> using procedures for reporting */
 
 *1 - Display months with review score below 9;
-proc print data=combinat_sql;
+proc print data=combined_sql;
 	where Average_Review_Score < 9;
 	title "Months with Review Scores below 9";
 run;
