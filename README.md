@@ -1,4 +1,4 @@
-#  Software Packages Project 📦
+# 📦 Software Packages Project 
 
 Interactive data analysis dashboard using **Python (Streamlit)** and complementary statistical processing using **SAS**. The project explores operational metrics and customer reviews for a tourism business.
 
