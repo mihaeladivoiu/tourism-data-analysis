@@ -1,6 +1,8 @@
-# 📦 Software Packages Project 
+# 📊 Tourism Data Analysis
 
-Interactive data analysis dashboard using **Python (Streamlit)** and complementary statistical processing using **SAS**. The project explores operational metrics and customer reviews for a tourism business.
+A data analysis project exploring three years of operational metrics and customer reviews for a tourism business using Python, Streamlit, and SAS.
+
+The project combines exploratory data analysis, data preprocessing, clustering, regression models, geospatial visualization, and statistical reporting through an interactive Streamlit dashboard and complementary SAS analysis.
 
 ---
 
@@ -30,10 +32,10 @@ The project analyzes three years of monthly activity and customer review data fr
 | File/Folder                         | Description                                                  |
 |------------------------------------|--------------------------------------------------------------|
 | `.streamlit/config.toml`           | Streamlit theme configuration                                |
-| `Casa_Timis_Customer_Reviews_3Y.csv` | Customer reviews & ratings                                   |
-| `Casa_Timis_Monthly_Activity_3Y.csv` | Monthly performance KPIs                                     |
+| `Casa_Timis_Customer_Reviews_3Y.csv` | Customer reviews & ratings                                 |
+| `Casa_Timis_Monthly_Activity_3Y.csv` | Monthly performance KPIs                                   |
 | `Project_Documentation_RO.pdf`     | Full project documentation (in Romanian)                     |
-| `README.md`                        | You're reading it 😉                                         |
+| `README.md` | Project overview and setup instructions                                             |
 | `casa_timis.png`                   | Dashboard header image                                       |
 | `dashboard.py`                     | Main Streamlit dashboard app                                 |
 | `requirements.txt`                 | Python dependencies                                          |
