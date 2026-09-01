@@ -1,10 +1,8 @@
 # 📊 Tourism Data Analysis
 
-A data analysis project exploring three years of operational metrics and customer reviews for a tourism business using Python, Streamlit, and SAS.
+A data analysis project exploring three years of synthetic operational metrics and customer review data for a tourism business using Python, Streamlit, and SAS.
 
 The project combines exploratory data analysis, data preprocessing, clustering, regression models, geospatial visualization, and statistical reporting through an interactive Streamlit dashboard and complementary SAS analysis.
-
-> **Data Note:** The datasets used in this project are synthetic and were generated with the assistance of ChatGPT for academic and educational purposes. They do not represent real operational or customer data from Casa Timiș.
 
 ---
 
@@ -108,3 +106,16 @@ datafile='/your/local/path/Casa_Timis_Monthly_Activity_3Y.csv'
 4. Run the script to generate the processed datasets, statistical analyses, and visualizations.
 
 > **Note:** Both CSV files must be accessible from the paths configured in the SAS script.
+
+---
+
+## 📊 Dataset
+
+The datasets used in this project are synthetic and were generated with the assistance of ChatGPT for academic and educational purposes. They do not represent real operational or customer data from Casa Timiș.
+
+---
+
+## 👩‍💻 Author
+
+**Mihaela-Irina Divoiu**  
+Academic project developed at the Bucharest University of Economic Studies, Faculty of Economic Cybernetics, Statistics and Informatics.
