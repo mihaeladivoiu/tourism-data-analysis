@@ -115,7 +115,9 @@ The datasets used in this project are synthetic and were generated with the assi
 
 ---
 
-## 👩‍💻 Author
+## 👩‍💻 Authors
 
 **Mihaela-Irina Divoiu**  
+**Daria-Mihaela Ducu**
+
 Academic project developed at the Bucharest University of Economic Studies, Faculty of Economic Cybernetics, Statistics and Informatics.
