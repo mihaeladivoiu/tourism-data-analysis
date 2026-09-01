@@ -4,6 +4,8 @@ A data analysis project exploring three years of operational metrics and custome
 
 The project combines exploratory data analysis, data preprocessing, clustering, regression models, geospatial visualization, and statistical reporting through an interactive Streamlit dashboard and complementary SAS analysis.
 
+> **Data Note:** The datasets used in this project are synthetic and were generated with the assistance of ChatGPT for academic and educational purposes. They do not represent real operational or customer data from Casa Timiș.
+
 ---
 
 ## ✨ Key Features
