@@ -6,93 +6,103 @@ The project combines exploratory data analysis, data preprocessing, clustering, 
 
 ---
 
-## 📊 Project Overview
-
-The project analyzes three years of monthly activity and customer review data from a tourism business — Casa Timiș. It includes:
+## ✨ Key Features
 
 - Exploratory Data Analysis (EDA)
 - Missing value and outlier handling
 - Data encoding and normalization
-- Clustering (K-Means)
-- Logistic and multiple linear regression
-- Geolocation mapping (GeoPandas)
-- Extended statistical analysis and reporting using SAS
+- K-Means clustering
+- Logistic regression
+- Multiple linear regression
+- Interactive KPI visualization
+- Geospatial visualization with GeoPandas
+- Extended statistical analysis and reporting with SAS
 
 ---
 
 ## 🧰 Technologies Used
 
-- **Python Packages**: `pandas`, `numpy`, `scikit-learn`, `statsmodels`, `streamlit`, `geopandas`
-- **SAS Features**: `PROC IMPORT`, `PROC FORMAT`, `PROC SQL`, `PROC MEANS`, `PROC REG`, `PROC SGPLOT`, array processing
+- **Python**: `pandas`, `numpy`, `scikit-learn`, `statsmodels`, `streamlit`, `geopandas`
+- **SAS**: `PROC IMPORT`, `PROC FORMAT`, `PROC SQL`, `PROC MEANS`, `PROC REG`, `PROC SGPLOT`, array processing
 
 ---
 
 ## 📁 Project Structure
 
-| File/Folder                         | Description                                                  |
-|------------------------------------|--------------------------------------------------------------|
-| `.streamlit/config.toml`           | Streamlit theme configuration                                |
-| `Casa_Timis_Customer_Reviews_3Y.csv` | Customer reviews & ratings                                 |
-| `Casa_Timis_Monthly_Activity_3Y.csv` | Monthly performance KPIs                                   |
-| `Project_Documentation_RO.pdf`     | Full project documentation (in Romanian)                     |
-| `README.md` | Project overview and setup instructions                                             |
-| `casa_timis.png`                   | Dashboard header image                                       |
-| `dashboard.py`                     | Main Streamlit dashboard app                                 |
-| `requirements.txt`                 | Python dependencies                                          |
-| `sas_analysis.sas`                 | SAS script with data processing, analysis & visualization    |
+| File/Folder | Description |
+|---|---|
+| `.streamlit/config.toml` | Streamlit theme configuration |
+| `Casa_Timis_Customer_Reviews_3Y.csv` | Customer reviews and ratings |
+| `Casa_Timis_Monthly_Activity_3Y.csv` | Monthly performance KPIs |
+| `Project_Documentation_RO.pdf` | Full project documentation in Romanian |
+| `README.md` | Project overview and setup instructions |
+| `casa_timis.png` | Dashboard header image |
+| `dashboard.py` | Main Streamlit dashboard application |
+| `requirements.txt` | Python dependencies |
+| `sas_analysis.sas` | SAS data processing, analysis, and visualization script |
 
 ---
 
-## 🧪 Python App Features
+## 🧪 Python Analysis
 
-- Displays datasets in interactive tables
-- Identifies and fixes missing values
-- Detects and replaces outliers
-- Encodes and scales features for modeling
-- Clusters months using K-Means
-- Builds and evaluates a logistic regression model
-- Performs multiple linear regression using `statsmodels`
-- Displays regression summaries and statistics
-- Visualizes KPIs over time
-- Maps business location with `geopandas`
+The Streamlit application provides an interactive interface for exploring and analyzing the datasets.
 
-### ▶️ How to Run the Python App Locally
+It includes:
+
+- Interactive dataset visualization
+- Missing value identification and handling
+- Outlier detection and replacement
+- Feature encoding and scaling
+- K-Means clustering of monthly activity
+- Logistic regression modeling and evaluation
+- Multiple linear regression using `statsmodels`
+- Regression summaries and statistical metrics
+- KPI visualization over time
+- Business location mapping with GeoPandas
+
+### ▶️ Run the Streamlit App
+
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Start the application:
+
+```bash
 streamlit run dashboard.py
 ```
 
 ---
 
-## 📘 SAS Analysis Features
+## 📘 SAS Analysis
 
-The `sas_analysis.sas` script extends the Python-based dashboard with traditional statistical processing using SAS. It includes:
+The `sas_analysis.sas` script complements the Python application with additional statistical processing and reporting.
 
-- Importing `.csv` files as SAS datasets  
-- Creating custom formats for review scores and guest volume  
-- Conditional categorization of complaints and occupancy levels  
-- Subsetting months by low revenue or low scores  
-- Calculating new variables via `ARRAY` (e.g., revenue per guest)  
-- Joining datasets with SQL for integrated reporting  
-- Generating monthly and seasonal charts  
-- Running descriptive statistics and regression models  
-- Visualizing trends with `PROC SGPLOT`  
-- Predicting revenue with multiple linear regression  
+The analysis includes:
 
+- Importing CSV files as SAS datasets
+- Creating custom formats for review scores and guest volume
+- Conditional categorization of complaints and occupancy levels
+- Subsetting observations based on revenue and review scores
+- Calculating derived variables using `ARRAY`
+- Joining datasets with `PROC SQL`
+- Generating descriptive statistics
+- Creating monthly and seasonal visualizations
+- Running regression models
+- Predicting revenue using multiple linear regression
 
-### ▶️ How to Run the SAS Analysis Locally
+### ▶️ Run the SAS Analysis
 
-To execute the SAS script and generate all outputs:
+1. Open SAS Studio or another compatible SAS environment.
+2. Update the dataset paths in `sas_analysis.sas` to match your local environment:
 
-1. **Open** SAS Studio (or your preferred SAS environment).
-2. **Update the file paths** in `sas_analysis.sas` to reflect your local setup. For example:
+```sas
+datafile='/your/local/path/Casa_Timis_Monthly_Activity_3Y.csv'
+```
 
-   ```sas
-   datafile='/your/local/path/Casa_Timis_Monthly_Activity_3Y.csv'
-   ```
+3. Load `sas_analysis.sas` into the SAS editor.
+4. Run the script to generate the processed datasets, statistical analyses, and visualizations.
 
-3. **Load the script** `sas_analysis.sas` into the SAS editor.
-4. **Run the full program** to generate all processed datasets, charts, and statistical results.
-
-> ⚠️ *Make sure both CSV files are accessible from the updated paths for the import procedures to work correctly.*
+> **Note:** Both CSV files must be accessible from the paths configured in the SAS script.
